@@ -13,4 +13,4 @@ options:
 schema:
   mac: "match([0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2})"
 
-image: "ghcr.io/chrivers/bifrost:master"
+image: "ghcr.io/chrivers/bifrost"
