@@ -17,10 +17,22 @@ You **must configure** bifrost before you can run it.
 
 Bifrost requires a configuration file, `config.yaml`.
 
-This file contains the essential settings needed to run the server.
+This file contains the essential settings needed to run the server. For example,
+the IP and MAC address used by the server, and a list of the Zigbee2Mqtt servers
+to connect to.
 
-For example, it contains the IP and MAC address used by the server,
-and a list of the Zigbee2Mqtt servers to connect to.
+When using the Home Assistant Add-on, the file must be available inside the
+docker container as `/config/bifrost/config.yaml`, which means you have to put
+it here:
+
+    /usr/share/hassio/homeassistant/bifrost
+
+### If you have the popular "File Editor" add-on installed, do this:
+
+  1. Open "File Editor"
+  2. Go to the top level
+  3. Create directory `bifrost` (*lowercase*)
+  4. Inside that directory, create `config.yaml`
 
 ## Configuration example
 
