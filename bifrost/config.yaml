@@ -1,0 +1,40 @@
+name: Bifrost
+version: "1.0.0"
+slug: bifrost
+description: "Bifrost enables you to emulate a Philips Hue Bridge to control lights, groups and scenes from Zigbee2Mqtt."
+url: "https://github.com/chrivers/bifrost"
+arch:
+  - amd64
+  - armv7
+  - aarch64
+init: false
+startup: services
+boot: auto
+map:
+  - config:rw
+privileged:
+  - NET_ADMIN
+host_network: true
+ports:
+  80/tcp: 80
+  443/tcp: 443
+  8485/tcp: 8485
+ports_description:
+  80/tcp: "HTTP port"
+  443/tcp: "HTTPS port"
+  8485/tcp: "Websocket port"
+options:
+  mac_address: "00:11:22:33:44:55"
+  ipaddress: "10.12.0.20"
+  netmask: "255.255.255.0"
+  gateway: "10.12.0.1"
+  timezone: "Europe/Copenhagen"
+  z2m_url: "ws://10.0.0.100:8080"
+schema:
+  mac_address: str
+  ipaddress: str
+  netmask: str
+  gateway: str
+  timezone: str
+  z2m_url: str
+image: "ghcr.io/chrivers/bifrost-addon-{arch}"
