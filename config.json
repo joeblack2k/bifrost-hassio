@@ -3,7 +3,7 @@
   "version": "1.0",
   "slug": "bifrost",
   "description": "Bifrost add-on",
-  "url": "https://github.com/yourusername/bifrost-addon",
+  "url": "https://github.com/joeblack2k/bifrost-hassio",
   "startup": "services",
   "arch": [
     "armhf",
